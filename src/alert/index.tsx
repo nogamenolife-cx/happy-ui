@@ -2,7 +2,16 @@ import React from 'react';
 import t from 'prop-types';
 
 export interface AlertProps {
+  /**
+   * @description       Alert 的类型
+   * @default           'info'
+   */
   kind?: 'info' | 'positive' | 'negative' | 'warning';
+  /**
+   * @description       string 的类型
+   * @default           'info'
+   */
+  children: string;
 }
 
 export type KindMap = Record<Required<AlertProps>['kind'], string>;
